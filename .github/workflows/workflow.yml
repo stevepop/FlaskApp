@@ -6,12 +6,12 @@ jobs:
   continuous-integration:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Set up Python 3.6
-        uses: actions/setup-python@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v3
         with:
-          python-version: 3.6
+          python-version: 3.9.16
 
         # Install Python Dependencies
       - name: Install dependencies
@@ -22,7 +22,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-southeast-1
+          aws-region: us-east-1
 
         # Build App and Run Application Test
       - name: Build Application and Run unit Test
