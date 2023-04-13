@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/ec2-user/app
+cd /home/ec2-user/FlaskApp
 pkill supervisord
 sleep 5
 source environment/bin/activate
